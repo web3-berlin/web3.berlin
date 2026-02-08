@@ -485,81 +485,96 @@
                 </div>
                 <div class="spacer-md-start hide-desktop-only"></div>
                 <div class="_2-column-item-thirds">
-                  <div class="w-layout-blockcontainer container-medium w-container">
-                    <div data-delay="4000" data-animation="slide" class="image-slider w-slider" data-autoplay="false" data-easing="ease" style="-webkit-transform:translate3d(0, 4rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 4rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 4rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 4rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" data-hide-arrows="false" data-disable-swipe="false" data-w-id="54590374-0032-b56c-d788-ef7ed46ac79c" data-autoplay-limit="0" data-nav-spacing="2" data-duration="500" data-infinite="true">
-                      <div class="image-slider-mask w-slider-mask">
-                        <div class="image-slider-slide w-slide">
-                          <div class="projects-item-wrapper">
-                            <div class="projects-item">
-                              <a href="#" class="project-link-block w-inline-block"><img src="images/ethereum-foundation-logo-vector.png" loading="lazy" alt="Logo of ethereum foundation" class="black-white-image project-image"></a>
-                            </div>
-                          </div>
-                          <div class="slider-image-description">
-                            <div class="spacer-s-start"></div>
-                            <div class="copy-small">Implementation of core features for the ETH2 Staking Portal. Helped thousands of validators secure the Ethereum network.</div>
-                            <div class="spacer-s-end"></div>
-                          </div>
-                        </div>
-                        <div class="image-slider-slide w-slide">
-                          <div class="projects-item-wrapper">
-                            <div class="projects-item">
-                              <a href="#" class="project-link-block w-inline-block"><img src="images/sun.png" loading="lazy" alt="Logo of Aavegotchi" class="black-white-image project-image"></a>
-                            </div>
-                          </div>
-                          <div class="slider-image-description">
-                            <div class="spacer-s-start"></div>
-                            <div class="copy-small">Aavegotchi Dapp V2 and TheGraph subgraphs for the entire ecosystem. Managed archive Polygon node and TheGraph indexer infrastructure.</div>
-                            <div class="spacer-s-end"></div>
-                          </div>
-                        </div>
-                        <div class="image-slider-slide w-slide">
-                          <div class="projects-item-wrapper">
-                            <div class="projects-item">
-                              <a href="#" class="project-link-block w-inline-block"><img src="images/the-graph8315_1the-graph8315.webp" loading="lazy" sizes="100vw" srcset="images/the-graph8315_1the-graph8315.webp 500w, images/the-graph8315_1the-graph8315.webp 866w" alt="Logo of the graph" class="black-white-image project-image"></a>
-                            </div>
-                          </div>
-                          <div class="slider-image-description">
-                            <div class="spacer-s-start"></div>
-                            <div class="copy-small">Subgraph development and indexer node operations. Core infrastructure for decentralized data access.</div>
-                            <div class="spacer-s-end"></div>
-                          </div>
-                        </div>
-                        <div class="image-slider-slide w-slide">
-                          <div class="projects-item-wrapper">
-                            <div class="projects-item">
-                              <a href="#" class="project-link-block w-inline-block"><img src="images/Sky-Money_1Sky-Money.webp" loading="lazy" sizes="100vw" srcset="images/Sky-Money_1Sky-Money.webp 500w, images/Sky-Money_1Sky-Money.webp 551w" alt="Logo of Sky" class="black-white-image project-image"></a>
-                            </div>
-                          </div>
-                          <div class="slider-image-description">
-                            <div class="spacer-s-start"></div>
-                            <div class="copy-small">Powerhouse: Decentralized operations toolkit for open organizations. Backend engineering, frontend development, and DevOps — including on-premise Kubernetes clusters for Vetra Cloud.</div>
-                            <div class="spacer-s-end"></div>
-                          </div>
-                        </div>
-                        <div class="image-slider-slide w-slide">
-                          <div class="projects-item-wrapper">
-                            <div class="projects-item">
-                              <a href="#" class="project-link-block w-inline-block"><img src="images/blob_cuKrpMf_1blob_cuKrpMf.webp" loading="lazy" alt="Logo of Protocol Labs" class="black-white-image"></a>
-                            </div>
-                          </div>
-                          <div class="slider-image-description">
-                            <div class="spacer-s-start"></div>
-                            <div class="copy-small">NFT Gallery App built on IPFS and Filecoin. Funded through Protocol Labs grant program.</div>
-                            <div class="spacer-s-end"></div>
-                          </div>
-                        </div>
+                  <style>
+                    .projects-grid {
+                      display: grid;
+                      grid-template-columns: repeat(2, 1fr);
+                      gap: 2rem;
+                    }
+                    @media screen and (max-width: 767px) {
+                      .projects-grid {
+                        grid-template-columns: 1fr;
+                      }
+                    }
+                    .project-card {
+                      background: #fff;
+                      border: 1px solid #e0e0e0;
+                      padding: 1.5rem;
+                      transition: all 0.2s ease;
+                    }
+                    .project-card:hover {
+                      border-color: #000;
+                      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                    }
+                    .project-card-logo {
+                      height: 60px;
+                      display: flex;
+                      align-items: center;
+                      margin-bottom: 1rem;
+                    }
+                    .project-card-logo img {
+                      max-height: 60px;
+                      max-width: 180px;
+                      object-fit: contain;
+                      filter: grayscale(100%);
+                      transition: filter 0.2s;
+                    }
+                    .project-card:hover .project-card-logo img {
+                      filter: grayscale(0%);
+                    }
+                    .project-card-title {
+                      font-family: 'Noto Sans Mono', monospace;
+                      font-weight: 600;
+                      font-size: 1.1rem;
+                      margin-bottom: 0.5rem;
+                    }
+                    .project-card-desc {
+                      font-family: 'Noto Sans Mono', monospace;
+                      font-size: 0.875rem;
+                      line-height: 1.5;
+                      opacity: 0.8;
+                    }
+                  </style>
+                  <div class="projects-grid">
+                    <!-- Sky / Powerhouse -->
+                    <div class="project-card">
+                      <div class="project-card-logo">
+                        <img src="images/Sky-Money_1Sky-Money.webp" alt="Logo of Sky" loading="lazy">
                       </div>
-                      <div class="slider-button w-slider-arrow-left">
-                        <div class="slider-button-inner-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 12 22" width="100%" class="slider-button-icon">
-                            <path d="m10.5 2-9 9 9 9" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                          </svg></div>
+                      <div class="project-card-title">Sky / Powerhouse</div>
+                      <div class="project-card-desc">Decentralized operations toolkit for open organizations. Backend engineering, frontend development, and DevOps — including on-premise Kubernetes clusters for Vetra Cloud.</div>
+                    </div>
+                    <!-- Aavegotchi -->
+                    <div class="project-card">
+                      <div class="project-card-logo">
+                        <img src="images/sun.png" alt="Logo of Aavegotchi" loading="lazy">
                       </div>
-                      <div class="slider-button is-right w-slider-arrow-right">
-                        <div class="slider-button-inner-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 12 22" width="100%" class="slider-button-icon">
-                            <path d="m10.5 2-9 9 9 9" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                          </svg></div>
+                      <div class="project-card-title">Aavegotchi</div>
+                      <div class="project-card-desc">Dapp V2 and TheGraph subgraphs for the entire ecosystem. Managed archive Polygon node and TheGraph indexer infrastructure.</div>
+                    </div>
+                    <!-- Protocol Labs / Filecoin -->
+                    <div class="project-card">
+                      <div class="project-card-logo">
+                        <img src="images/blob_cuKrpMf_1blob_cuKrpMf.webp" alt="Logo of Protocol Labs" loading="lazy">
                       </div>
-                      <div class="image-slider-dots w-slider-nav w-round"></div>
+                      <div class="project-card-title">Protocol Labs</div>
+                      <div class="project-card-desc">NFT Gallery App built on IPFS and Filecoin. Funded through Protocol Labs grant program.</div>
+                    </div>
+                    <!-- Ethereum Foundation -->
+                    <div class="project-card">
+                      <div class="project-card-logo">
+                        <img src="images/ethereum-foundation-logo-vector.png" alt="Logo of Ethereum Foundation" loading="lazy">
+                      </div>
+                      <div class="project-card-title">Ethereum Foundation</div>
+                      <div class="project-card-desc">Implementation of core features for the ETH2 Staking Portal. Helped thousands of validators secure the Ethereum network.</div>
+                    </div>
+                    <!-- The Graph -->
+                    <div class="project-card">
+                      <div class="project-card-logo">
+                        <img src="images/the-graph8315_1the-graph8315.webp" alt="Logo of The Graph" loading="lazy">
+                      </div>
+                      <div class="project-card-title">The Graph</div>
+                      <div class="project-card-desc">Subgraph development and indexer node operations. Core infrastructure for decentralized data access.</div>
                     </div>
                   </div>
                 </div>
