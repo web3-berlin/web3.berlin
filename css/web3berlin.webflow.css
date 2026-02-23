@@ -2074,19 +2074,3 @@ figure {
 }
 
 
-
-/* Fix: Team section overflow causing Elke to bleed into Projects */
-.section-team {
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.section-projects {
-  position: relative;
-  z-index: 2;
-}
-
-._2-column-item-thirds {
-  overflow: hidden;
-}
