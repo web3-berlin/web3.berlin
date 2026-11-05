@@ -72,7 +72,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Aavegotchi",
+          "name": "The data layer for one of Polygon's most active on-chain games",
           "item": "https://web3.berlin/projects/aavegotchi.html"
         }
       ]
@@ -235,44 +235,37 @@
       </div>
     </div>
     <main class="main-wrapper">
-      <section class="section-imprint cs-section">
+      <article class="cs-page">
         <div class="page-padding">
           <div class="w-layout-blockcontainer container-large w-container">
-            <div class="spacer-xl-start spacer-xl-end">
-              <div class="_2-column-row-1-2">
-                <div class="_2-column-item-1third">
-                  <div>
-                    <a href="../index.html#section-projects" class="cs-back">← All projects</a>
-                    <div class="cs-logo"><img src="../images/sun.png" alt="Logo of Aavegotchi"></div>
-                    <h1 class="heading-smaller-on-mobile" style="font-size: 2.5rem;">Aavegotchi</h1>
-                    <dl class="cs-facts"><div><dt>Client</dt><dd>Aavegotchi</dd></div><div><dt>When</dt><dd>Aug 2021 – Feb 2024</dd></div><div><dt>Services</dt><dd>Subgraphs, data, infrastructure</dd></div><div><dt>Chain</dt><dd>Polygon</dd></div></dl>
-                  </div>
+            <header class="cs-hero">
+              <a href="../index.html#section-projects" class="cs-back">← All projects</a>
+              <div class="cs-hero-row">
+                <div class="cs-hero-text">
+                  <div class="cs-eyebrow">Case study · Aavegotchi</div>
+                  <h1 class="cs-title">The data layer for one of Polygon&#x27;s most active on-chain games</h1>
+                  <p class="cs-lede">For two and a half years we were the lead developers of the subgraphs behind Aavegotchi&#x27;s dApp, marketplace and analytics, and of the infrastructure that served them.</p>
                 </div>
-                <div class="spacer-md-start hide-desktop-only"></div>
-                <div class="_2-column-item-thirds" style="display: block;">
-                  <div class="cs-main">
-                    <div class="cs-eyebrow">Web3 data &amp; infrastructure</div>
-                    <h2 class="cs-headline">The data layer for one of Polygon&#x27;s most active on-chain games</h2>
-                    <p>Aavegotchi is an NFT game where every item, parcel and auction lives on-chain. Its dApp, marketplace and analytics all read that data through subgraphs on The Graph. For two and a half years we were the lead developers of those subgraphs and the infrastructure that served them.</p>
-                    <h3>What we built</h3>
-                    <ul class="cs-built"><li>The core, Gotchiverse and Baazaar subgraphs: lending, land parcels, installations, access rights, GBM auctions and buy orders.</li><li>A data API, including the circulating-supply endpoint used by market data sites.</li><li>An analytics site for the Gotchiverse economy.</li><li>A load balancer in front of self-hosted Graph nodes for development and production.</li><li>Unit tests and CI pipelines that deploy subgraphs automatically.</li></ul>
-                    <h3>Tech stack</h3>
-                    <ul class="cs-chips" aria-label="Tech stack"><li>The Graph</li><li>AssemblyScript</li><li>TypeScript</li><li>Node.js</li><li>Polygon</li><li>GitHub Actions</li></ul>
-                    <div class="cs-numbers"><div><b>176</b><span>merged pull requests</span></div><div><b>20+</b><span>repositories</span></div><div><b>#1</b><span>contributor to 3 core subgraphs</span></div></div>
-                    <blockquote class="cs-quote">“web3.berlin was always reliable, focused, and committed to the tasks at hand. The value of such cannot be understated especially when working in such a fast moving space as blockchain.”<footer>Jesse Johnson, COO at AavegotchiDAO</footer></blockquote>
-                    <div class="cs-links"><a href="https://github.com/aavegotchi/aavegotchi-core-subgraph" target="_blank" rel="noopener">aavegotchi/aavegotchi-core-subgraph</a><a href="https://github.com/aavegotchi/gotchiverse-subgraph" target="_blank" rel="noopener">aavegotchi/gotchiverse-subgraph</a></div>
-                    <a href="../index.html#section-contact" class="cs-cta">Let's build something similar →</a>
-                    <nav class="cs-more" aria-label="More case studies">
-                      <div class="cs-eyebrow">More case studies</div>
-                      <ul><li><a href="powerhouse.html">Powerhouse<span>2023–today</span></a></li><li><a href="vetra-cloud.html">Vetra Cloud<span>2026</span></a></li><li><a href="document-ai.html">Private Document AI<span>2026</span></a></li><li><a href="nft-gallery.html">Filecoin NFT Gallery<span>2021</span></a></li></ul>
-                    </nav>
-                  </div>
-                </div>
+                <div class="cs-hero-logo"><img src="../images/sun.png" alt="Logo of Aavegotchi"></div>
               </div>
-            </div>
+              <dl class="cs-facts"><div><dt>Chain</dt><dd>Polygon</dd></div><div><dt>Timeline</dt><dd>Aug 2021 – Feb 2024</dd></div><div><dt>Our role</dt><dd>Lead subgraph developers</dd></div><div><dt>Services</dt><dd>Subgraphs · data · infrastructure</dd></div></dl>
+            </header>
+            <section class="cs-block"><h2 class="cs-label">The challenge</h2><div class="cs-body"><p>In Aavegotchi every item, land parcel and auction lives on-chain. The dApp, the Baazaar marketplace and the analytics all need that data fast, consistent and always available, while the game keeps shipping new features.</p></div></section>
+            <section class="cs-block"><h2 class="cs-label">How it works</h2><div class="cs-body"><ol class="cs-flow"><li><b>Polygon</b><span>game contracts emit events</span></li><li><b>Subgraphs</b><span>core, Gotchiverse, Baazaar</span></li><li><b>Load balancer</b><span>in front of self-hosted Graph nodes</span></li><li><b>Apps</b><span>dApp, Baazaar, analytics, data API</span></li></ol></div></section>
+            <section class="cs-block"><h2 class="cs-label">What we built</h2><div class="cs-body"><ul class="cs-built"><li>The core, Gotchiverse and Baazaar subgraphs: lending, land parcels, installations, access rights, GBM auctions and buy orders.</li><li>A data API, including the circulating-supply endpoint used by market data sites.</li><li>An analytics site for the Gotchiverse economy.</li><li>A load balancer in front of self-hosted Graph nodes for development and production.</li><li>Unit tests and CI pipelines that deploy subgraphs automatically.</li></ul></div></section>
+            <section class="cs-block"><h2 class="cs-label">Results</h2><div class="cs-body"><div class="cs-numbers"><div><b>176</b><span>merged pull requests</span></div><div><b>20+</b><span>repositories</span></div><div><b>#1</b><span>contributor to 3 core subgraphs</span></div></div><blockquote class="cs-quote"><p>“web3.berlin was always reliable, focused, and committed to the tasks at hand. The value of such cannot be understated especially when working in such a fast moving space as blockchain.”</p><footer>Jesse Johnson, COO at AavegotchiDAO</footer></blockquote></div></section>
+            <section class="cs-block"><h2 class="cs-label">Tech stack</h2><div class="cs-body"><ul class="cs-chips"><li>The Graph</li><li>AssemblyScript</li><li>TypeScript</li><li>Node.js</li><li>Polygon</li><li>GitHub Actions</li></ul><div class="cs-links"><a href="https://github.com/aavegotchi/aavegotchi-core-subgraph" target="_blank" rel="noopener">aavegotchi/aavegotchi-core-subgraph</a><a href="https://github.com/aavegotchi/gotchiverse-subgraph" target="_blank" rel="noopener">aavegotchi/gotchiverse-subgraph</a></div></div></section>
+            <section class="cs-cta-band">
+              <p>Planning something similar?</p>
+              <a href="../index.html#section-contact" class="cs-cta">Let's build together →</a>
+            </section>
+            <nav class="cs-more" aria-label="More case studies">
+              <h2 class="cs-label">More case studies</h2>
+              <ul><li><a href="powerhouse.html"><span class="cs-more-meta">Powerhouse · 2023–today</span><b>Document engine, GraphQL API and cloud console</b></a></li><li><a href="vetra-cloud.html"><span class="cs-more-meta">Powerhouse · 2026</span><b>GitOps Kubernetes platform on Hetzner</b></a></li><li><a href="document-ai.html"><span class="cs-more-meta">Vetra Cloud · 2026</span><b>Self-hosted LLM pipeline for documents</b></a></li><li><a href="nft-gallery.html"><span class="cs-more-meta">Filecoin devgrant · 2021</span><b>Grant-funded dApp on IPFS and Filecoin</b></a></li></ul>
+            </nav>
           </div>
         </div>
-      </section>
+      </article>
     </main>
     <footer class="footer">
       <div class="spacer-footer"></div>

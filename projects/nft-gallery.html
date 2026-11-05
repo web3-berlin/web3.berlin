@@ -51,7 +51,7 @@
           "url": "https://web3.berlin/images/webclip.jpg"
         }
       },
-      "about": "Filecoin NFT Gallery",
+      "about": "Filecoin devgrant",
       "keywords": "React, NestJS, IDX / Ceramic, IPFS, Filecoin"
     },
     {
@@ -72,7 +72,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Filecoin NFT Gallery",
+          "name": "An NFT gallery on decentralised identity and storage",
           "item": "https://web3.berlin/projects/nft-gallery.html"
         }
       ]
@@ -235,44 +235,37 @@
       </div>
     </div>
     <main class="main-wrapper">
-      <section class="section-imprint cs-section">
+      <article class="cs-page">
         <div class="page-padding">
           <div class="w-layout-blockcontainer container-large w-container">
-            <div class="spacer-xl-start spacer-xl-end">
-              <div class="_2-column-row-1-2">
-                <div class="_2-column-item-1third">
-                  <div>
-                    <a href="../index.html#section-projects" class="cs-back">← All projects</a>
-                    <div class="cs-logo"><span style="display:inline-flex;align-items:center;gap:.6rem"><img src="../images/filecoin-logo.webp" alt="Logo of Filecoin" width="48" height="48" style="max-height:48px"><span class="cs-logo-text">filecoin</span></span></div>
-                    <h1 class="heading-smaller-on-mobile" style="font-size: 2.5rem;">Filecoin NFT Gallery</h1>
-                    <dl class="cs-facts"><div><dt>Funded by</dt><dd>Filecoin devgrants, wave 8</dd></div><div><dt>When</dt><dd>Mar–Sep 2021</dd></div><div><dt>Services</dt><dd>dApp development</dd></div><div><dt>Storage</dt><dd>IPFS · Filecoin</dd></div></dl>
-                  </div>
+            <header class="cs-hero">
+              <a href="../index.html#section-projects" class="cs-back">← All projects</a>
+              <div class="cs-hero-row">
+                <div class="cs-hero-text">
+                  <div class="cs-eyebrow">Case study · Filecoin devgrant</div>
+                  <h1 class="cs-title">An NFT gallery on decentralised identity and storage</h1>
+                  <p class="cs-lede">With a Filecoin devgrant we built an NFT gallery where collectors own their identity and the artwork lives on IPFS and Filecoin.</p>
                 </div>
-                <div class="spacer-md-start hide-desktop-only"></div>
-                <div class="_2-column-item-thirds" style="display: block;">
-                  <div class="cs-main">
-                    <div class="cs-eyebrow">Grant-funded dApp</div>
-                    <h2 class="cs-headline">An NFT gallery on decentralised identity and storage</h2>
-                    <p>With a grant from the Filecoin devgrants program, we built an NFT gallery where collectors sign in with a self-owned decentralised identity and the artwork itself is stored on IPFS and Filecoin, not on a company server.</p>
-                    <h3>What we built</h3>
-                    <ul class="cs-built"><li>A React gallery app with sign-in via IDX and Ceramic.</li><li>A NestJS backend for indexing and curation.</li><li>Artwork and metadata pinned to IPFS and archived on Filecoin.</li></ul>
-                    <h3>Tech stack</h3>
-                    <ul class="cs-chips" aria-label="Tech stack"><li>React</li><li>NestJS</li><li>IDX / Ceramic</li><li>IPFS</li><li>Filecoin</li></ul>
-                    
-                    
-                    <div class="cs-links"><a href="https://github.com/filecoin-project/devgrants/pull/258" target="_blank" rel="noopener">Grant application (filecoin-project/devgrants #258)</a></div>
-                    <a href="../index.html#section-contact" class="cs-cta">Let's build something similar →</a>
-                    <nav class="cs-more" aria-label="More case studies">
-                      <div class="cs-eyebrow">More case studies</div>
-                      <ul><li><a href="powerhouse.html">Powerhouse<span>2023–today</span></a></li><li><a href="vetra-cloud.html">Vetra Cloud<span>2026</span></a></li><li><a href="document-ai.html">Private Document AI<span>2026</span></a></li><li><a href="aavegotchi.html">Aavegotchi<span>2021–2024</span></a></li></ul>
-                    </nav>
-                  </div>
-                </div>
+                <div class="cs-hero-logo"><img src="../images/filecoin-logo.webp" alt="Logo of Filecoin" width="64" height="64"></div>
               </div>
-            </div>
+              <dl class="cs-facts"><div><dt>Funding</dt><dd>Filecoin devgrants, wave 8</dd></div><div><dt>Timeline</dt><dd>Mar – Sep 2021</dd></div><div><dt>Storage</dt><dd>IPFS · Filecoin</dd></div><div><dt>Services</dt><dd>dApp development</dd></div></dl>
+            </header>
+            <section class="cs-block"><h2 class="cs-label">The challenge</h2><div class="cs-body"><p>NFT artwork often sits on an ordinary company server, so it can disappear with the company. The grant&#x27;s goal was a gallery where both the collector&#x27;s identity and the artwork are decentralised.</p></div></section>
+            <section class="cs-block"><h2 class="cs-label">How it works</h2><div class="cs-body"><ol class="cs-flow"><li><b>Collector</b><span>signs in with IDX / Ceramic</span></li><li><b>Gallery app</b><span>React</span></li><li><b>Backend</b><span>NestJS indexing and curation</span></li><li><b>Storage</b><span>IPFS pinning, Filecoin archive</span></li></ol></div></section>
+            <section class="cs-block"><h2 class="cs-label">What we built</h2><div class="cs-body"><ul class="cs-built"><li>A React gallery app with sign-in via IDX and Ceramic.</li><li>A NestJS backend for indexing and curation.</li><li>Artwork and metadata pinned to IPFS and archived on Filecoin.</li></ul></div></section>
+            
+            <section class="cs-block"><h2 class="cs-label">Tech stack</h2><div class="cs-body"><ul class="cs-chips"><li>React</li><li>NestJS</li><li>IDX / Ceramic</li><li>IPFS</li><li>Filecoin</li></ul><div class="cs-links"><a href="https://github.com/filecoin-project/devgrants/pull/258" target="_blank" rel="noopener">Grant application (filecoin-project/devgrants #258)</a></div></div></section>
+            <section class="cs-cta-band">
+              <p>Planning something similar?</p>
+              <a href="../index.html#section-contact" class="cs-cta">Let's build together →</a>
+            </section>
+            <nav class="cs-more" aria-label="More case studies">
+              <h2 class="cs-label">More case studies</h2>
+              <ul><li><a href="powerhouse.html"><span class="cs-more-meta">Powerhouse · 2023–today</span><b>Document engine, GraphQL API and cloud console</b></a></li><li><a href="vetra-cloud.html"><span class="cs-more-meta">Powerhouse · 2026</span><b>GitOps Kubernetes platform on Hetzner</b></a></li><li><a href="document-ai.html"><span class="cs-more-meta">Vetra Cloud · 2026</span><b>Self-hosted LLM pipeline for documents</b></a></li><li><a href="aavegotchi.html"><span class="cs-more-meta">Aavegotchi · 2021–2024</span><b>Subgraphs and indexing for an on-chain game</b></a></li></ul>
+            </nav>
           </div>
         </div>
-      </section>
+      </article>
     </main>
     <footer class="footer">
       <div class="spacer-footer"></div>

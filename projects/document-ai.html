@@ -51,7 +51,7 @@
           "url": "https://web3.berlin/images/webclip.jpg"
         }
       },
-      "about": "Private Document AI",
+      "about": "Vetra Cloud",
       "keywords": "Docling, llama.cpp, Open-weight LLM, Paperless-ngx, TypeScript, Kubernetes"
     },
     {
@@ -72,7 +72,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Private Document AI",
+          "name": "Private document AI that never leaves the cluster",
           "item": "https://web3.berlin/projects/document-ai.html"
         }
       ]
@@ -235,44 +235,37 @@
       </div>
     </div>
     <main class="main-wrapper">
-      <section class="section-imprint cs-section">
+      <article class="cs-page">
         <div class="page-padding">
           <div class="w-layout-blockcontainer container-large w-container">
-            <div class="spacer-xl-start spacer-xl-end">
-              <div class="_2-column-row-1-2">
-                <div class="_2-column-item-1third">
-                  <div>
-                    <a href="../index.html#section-projects" class="cs-back">← All projects</a>
-                    <div class="cs-logo"><span class="cs-logo-text">Document AI</span></div>
-                    <h1 class="heading-smaller-on-mobile" style="font-size: 2.5rem;">Private Document AI</h1>
-                    <dl class="cs-facts"><div><dt>Built for</dt><dd>Vetra Cloud customers</dd></div><div><dt>When</dt><dd>2026</dd></div><div><dt>Services</dt><dd>Applied AI, platform</dd></div><div><dt>Data location</dt><dd>Customer&#x27;s own cluster</dd></div></dl>
-                  </div>
+            <header class="cs-hero">
+              <a href="../index.html#section-projects" class="cs-back">← All projects</a>
+              <div class="cs-hero-row">
+                <div class="cs-hero-text">
+                  <div class="cs-eyebrow">Case study · Vetra Cloud</div>
+                  <h1 class="cs-title">Private document AI that never leaves the cluster</h1>
+                  <p class="cs-lede">A pipeline that turns documents and recordings into searchable content, with the language model running inside the customer&#x27;s own Kubernetes cluster.</p>
                 </div>
-                <div class="spacer-md-start hide-desktop-only"></div>
-                <div class="_2-column-item-thirds" style="display: block;">
-                  <div class="cs-main">
-                    <div class="cs-eyebrow">Applied AI &amp; agents</div>
-                    <h2 class="cs-headline">Private document AI that never leaves the cluster</h2>
-                    <p>Teams want to search and automate their own documents without sending them to an outside AI provider. We built a pipeline that turns PDFs, Office files, scans, audio and video into structured, searchable content. The language model runs inside the customer&#x27;s own Kubernetes cluster, with no public endpoint.</p>
-                    <h3>What we built</h3>
-                    <ul class="cs-built"><li>Ingestion with Docling: documents become typed, queryable blocks; recordings become timestamped transcripts.</li><li>Workflow connectors to Paperless-ngx, so scanned paperwork flows in automatically.</li><li>An open-weight language model served with llama.cpp inside the cluster. Prompts and documents stay on the customer&#x27;s servers.</li><li>Packaged as a one-click add-on in the Vetra cloud console.</li></ul>
-                    <h3>Tech stack</h3>
-                    <ul class="cs-chips" aria-label="Tech stack"><li>Docling</li><li>llama.cpp</li><li>Open-weight LLM</li><li>Paperless-ngx</li><li>TypeScript</li><li>Kubernetes</li></ul>
-                    <div class="cs-numbers"><div><b>0</b><span>documents sent to outside AI providers</span></div><div><b>6</b><span>input types: PDF, Office, image, scan, audio, video</span></div></div>
-                    
-                    <div class="cs-links"><a href="https://github.com/powerhouse-inc/docling-package" target="_blank" rel="noopener">powerhouse-inc/docling-package</a><a href="https://github.com/powerhouse-inc/reactor-workflow" target="_blank" rel="noopener">powerhouse-inc/reactor-workflow</a></div>
-                    <a href="../index.html#section-contact" class="cs-cta">Let's build something similar →</a>
-                    <nav class="cs-more" aria-label="More case studies">
-                      <div class="cs-eyebrow">More case studies</div>
-                      <ul><li><a href="powerhouse.html">Powerhouse<span>2023–today</span></a></li><li><a href="vetra-cloud.html">Vetra Cloud<span>2026</span></a></li><li><a href="aavegotchi.html">Aavegotchi<span>2021–2024</span></a></li><li><a href="nft-gallery.html">Filecoin NFT Gallery<span>2021</span></a></li></ul>
-                    </nav>
-                  </div>
-                </div>
+                
               </div>
-            </div>
+              <dl class="cs-facts"><div><dt>Built for</dt><dd>Vetra Cloud customers</dd></div><div><dt>Timeline</dt><dd>2026</dd></div><div><dt>Data location</dt><dd>Customer&#x27;s own cluster</dd></div><div><dt>Services</dt><dd>Applied AI · platform</dd></div></dl>
+            </header>
+            <section class="cs-block"><h2 class="cs-label">The challenge</h2><div class="cs-body"><p>Teams want to search and automate their own documents, but many can&#x27;t send contracts, plans or recordings to an outside AI provider. The AI had to come to the data, not the other way round.</p></div></section>
+            <section class="cs-block"><h2 class="cs-label">How it works</h2><div class="cs-body"><ol class="cs-flow"><li><b>Your files</b><span>PDF, Office, scans, audio, video</span></li><li><b>Docling</b><span>parses into typed blocks</span></li><li><b>Blocks &amp; transcripts</b><span>structured, timestamped</span></li><li><b>Open-weight LLM</b><span>llama.cpp, no public endpoint</span></li><li><b>Search &amp; workflows</b><span>Paperless-ngx, automations</span></li></ol><p class="cs-flow-note">Everything above runs inside the customer&#x27;s own cluster.</p></div></section>
+            <section class="cs-block"><h2 class="cs-label">What we built</h2><div class="cs-body"><ul class="cs-built"><li>Ingestion with Docling: documents become typed, queryable blocks; recordings become timestamped transcripts.</li><li>Workflow connectors to Paperless-ngx, so scanned paperwork flows in automatically.</li><li>An open-weight language model served with llama.cpp inside the cluster. Prompts and documents stay on the customer&#x27;s servers.</li><li>Packaged as a one-click add-on in the Vetra cloud console.</li></ul></div></section>
+            <section class="cs-block"><h2 class="cs-label">Results</h2><div class="cs-body"><div class="cs-numbers"><div><b>0</b><span>documents sent to outside AI providers</span></div><div><b>6</b><span>input types, from PDF to video</span></div></div></div></section>
+            <section class="cs-block"><h2 class="cs-label">Tech stack</h2><div class="cs-body"><ul class="cs-chips"><li>Docling</li><li>llama.cpp</li><li>Open-weight LLM</li><li>Paperless-ngx</li><li>TypeScript</li><li>Kubernetes</li></ul><div class="cs-links"><a href="https://github.com/powerhouse-inc/docling-package" target="_blank" rel="noopener">powerhouse-inc/docling-package</a><a href="https://github.com/powerhouse-inc/reactor-workflow" target="_blank" rel="noopener">powerhouse-inc/reactor-workflow</a></div></div></section>
+            <section class="cs-cta-band">
+              <p>Planning something similar?</p>
+              <a href="../index.html#section-contact" class="cs-cta">Let's build together →</a>
+            </section>
+            <nav class="cs-more" aria-label="More case studies">
+              <h2 class="cs-label">More case studies</h2>
+              <ul><li><a href="powerhouse.html"><span class="cs-more-meta">Powerhouse · 2023–today</span><b>Document engine, GraphQL API and cloud console</b></a></li><li><a href="vetra-cloud.html"><span class="cs-more-meta">Powerhouse · 2026</span><b>GitOps Kubernetes platform on Hetzner</b></a></li><li><a href="aavegotchi.html"><span class="cs-more-meta">Aavegotchi · 2021–2024</span><b>Subgraphs and indexing for an on-chain game</b></a></li><li><a href="nft-gallery.html"><span class="cs-more-meta">Filecoin devgrant · 2021</span><b>Grant-funded dApp on IPFS and Filecoin</b></a></li></ul>
+            </nav>
           </div>
         </div>
-      </section>
+      </article>
     </main>
     <footer class="footer">
       <div class="spacer-footer"></div>

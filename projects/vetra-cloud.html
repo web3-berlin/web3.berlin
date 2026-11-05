@@ -5,13 +5,13 @@
   <title>Vetra Cloud case study: multi-tenant Kubernetes platform — web3.berlin</title>
   <meta name="description" content="How web3.berlin designed and built Vetra Cloud for Powerhouse: a GitOps, multi-tenant Kubernetes platform on Hetzner with k3s, ArgoCD, Terraform and full observability.">
   <link rel="canonical" href="https://web3.berlin/projects/vetra-cloud.html">
-  <meta property="og:title" content="A multi-tenant Kubernetes platform, from empty servers to production">
+  <meta property="og:title" content="Vetra Cloud: a multi-tenant Kubernetes platform, from empty servers to production">
   <meta property="og:description" content="How web3.berlin designed and built Vetra Cloud for Powerhouse: a GitOps, multi-tenant Kubernetes platform on Hetzner with k3s, ArgoCD, Terraform and full observability.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://web3.berlin/projects/vetra-cloud.html">
   <meta property="og:image" content="https://web3.berlin/images/webclip.jpg">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="A multi-tenant Kubernetes platform, from empty servers to production">
+  <meta name="twitter:title" content="Vetra Cloud: a multi-tenant Kubernetes platform, from empty servers to production">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <link rel="preload" href="../fonts/noto-sans-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link href="../css/fonts.css" rel="stylesheet" type="text/css">
@@ -34,7 +34,7 @@
   "@graph": [
     {
       "@type": "Article",
-      "headline": "A multi-tenant Kubernetes platform, from empty servers to production",
+      "headline": "Vetra Cloud: a multi-tenant Kubernetes platform, from empty servers to production",
       "description": "How web3.berlin designed and built Vetra Cloud for Powerhouse: a GitOps, multi-tenant Kubernetes platform on Hetzner with k3s, ArgoCD, Terraform and full observability.",
       "url": "https://web3.berlin/projects/vetra-cloud.html",
       "image": "https://web3.berlin/images/webclip.jpg",
@@ -51,7 +51,7 @@
           "url": "https://web3.berlin/images/webclip.jpg"
         }
       },
-      "about": "Vetra Cloud",
+      "about": "Powerhouse",
       "keywords": "k3s, Terraform, ArgoCD, Helm, Cilium, OpenBao, CloudNativePG, Harbor, Prometheus · Loki · Tempo · Grafana, Go"
     },
     {
@@ -72,7 +72,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Vetra Cloud",
+          "name": "Vetra Cloud: a multi-tenant Kubernetes platform, from empty servers to production",
           "item": "https://web3.berlin/projects/vetra-cloud.html"
         }
       ]
@@ -235,44 +235,37 @@
       </div>
     </div>
     <main class="main-wrapper">
-      <section class="section-imprint cs-section">
+      <article class="cs-page">
         <div class="page-padding">
           <div class="w-layout-blockcontainer container-large w-container">
-            <div class="spacer-xl-start spacer-xl-end">
-              <div class="_2-column-row-1-2">
-                <div class="_2-column-item-1third">
-                  <div>
-                    <a href="../index.html#section-projects" class="cs-back">← All projects</a>
-                    <div class="cs-logo"><span class="cs-logo-text">Vetra Cloud</span></div>
-                    <h1 class="heading-smaller-on-mobile" style="font-size: 2.5rem;">Vetra Cloud</h1>
-                    <dl class="cs-facts"><div><dt>Client</dt><dd>Powerhouse</dd></div><div><dt>When</dt><dd>2026</dd></div><div><dt>Services</dt><dd>Platform engineering, DevOps</dd></div><div><dt>Runs on</dt><dd>Hetzner, EU</dd></div></dl>
-                  </div>
+            <header class="cs-hero">
+              <a href="../index.html#section-projects" class="cs-back">← All projects</a>
+              <div class="cs-hero-row">
+                <div class="cs-hero-text">
+                  <div class="cs-eyebrow">Case study · Powerhouse</div>
+                  <h1 class="cs-title">Vetra Cloud: a multi-tenant Kubernetes platform, from empty servers to production</h1>
+                  <p class="cs-lede">We designed and built the platform that runs Powerhouse&#x27;s customer apps. Every tenant gets its own environments, database, secrets and dashboards, and everything is defined in Git.</p>
                 </div>
-                <div class="spacer-md-start hide-desktop-only"></div>
-                <div class="_2-column-item-thirds" style="display: block;">
-                  <div class="cs-main">
-                    <div class="cs-eyebrow">Operations &amp; infrastructure</div>
-                    <h2 class="cs-headline">A multi-tenant Kubernetes platform, from empty servers to production</h2>
-                    <p>Powerhouse needed a place to run its customers&#x27; apps in the EU, each one isolated, monitored and deployable in minutes. We designed and built that platform: every tenant gets its own environments, database, secrets and dashboards, and everything is defined in Git.</p>
-                    <h3>What we built</h3>
-                    <ul class="cs-built"><li>Lightweight Kubernetes (k3s) clusters on Hetzner, provisioned with Terraform.</li><li>GitOps deployment with ArgoCD and Helm: a merge to Git is a deploy.</li><li>Managed Postgres, a private container registry, persistent storage and automatic TLS certificates.</li><li>Secrets kept in OpenBao and synced into the cluster.</li><li>Full observability with Prometheus, Loki, Tempo and Grafana, plus a proxy that keeps each tenant&#x27;s monitoring data separate.</li><li>A command-line tool and a GitHub Action so teams can deploy without touching Kubernetes.</li></ul>
-                    <h3>Tech stack</h3>
-                    <ul class="cs-chips" aria-label="Tech stack"><li>k3s</li><li>Terraform</li><li>ArgoCD</li><li>Helm</li><li>Cilium</li><li>OpenBao</li><li>CloudNativePG</li><li>Harbor</li><li>Prometheus · Loki · Tempo · Grafana</li><li>Go</li></ul>
-                    <div class="cs-numbers"><div><b>2,100+</b><span>commits, main author</span></div><div><b>~300</b><span>merged pull requests</span></div><div><b>EU</b><span>hosted, GDPR-friendly</span></div></div>
-                    
-                    <div class="cs-links"><a href="https://github.com/powerhouse-inc/vetra-cli" target="_blank" rel="noopener">powerhouse-inc/vetra-cli</a><a href="https://github.com/powerhouse-inc/vetra-cloud-package" target="_blank" rel="noopener">powerhouse-inc/vetra-cloud-package</a></div>
-                    <a href="../index.html#section-contact" class="cs-cta">Let's build something similar →</a>
-                    <nav class="cs-more" aria-label="More case studies">
-                      <div class="cs-eyebrow">More case studies</div>
-                      <ul><li><a href="powerhouse.html">Powerhouse<span>2023–today</span></a></li><li><a href="document-ai.html">Private Document AI<span>2026</span></a></li><li><a href="aavegotchi.html">Aavegotchi<span>2021–2024</span></a></li><li><a href="nft-gallery.html">Filecoin NFT Gallery<span>2021</span></a></li></ul>
-                    </nav>
-                  </div>
-                </div>
+                
               </div>
-            </div>
+              <dl class="cs-facts"><div><dt>Our role</dt><dd>Design, build, main author</dd></div><div><dt>Timeline</dt><dd>2026</dd></div><div><dt>Hosting</dt><dd>Hetzner, EU</dd></div><div><dt>Services</dt><dd>Platform engineering · DevOps</dd></div></dl>
+            </header>
+            <section class="cs-block"><h2 class="cs-label">The challenge</h2><div class="cs-body"><p>Powerhouse needed a place to run its customers&#x27; apps in the EU, each one isolated from the others, monitored, and deployable in minutes, without every team having to learn Kubernetes.</p></div></section>
+            <section class="cs-block"><h2 class="cs-label">How it works</h2><div class="cs-body"><ol class="cs-flow"><li><b>git push</b><span>or the vetra CLI</span></li><li><b>GitHub Action</b><span>builds and publishes</span></li><li><b>ArgoCD</b><span>syncs the desired state</span></li><li><b>k3s on Hetzner</b><span>provisioned with Terraform</span></li><li><b>Tenant</b><span>app, Postgres, secrets, dashboards</span></li></ol></div></section>
+            <section class="cs-block"><h2 class="cs-label">What we built</h2><div class="cs-body"><ul class="cs-built"><li>Lightweight Kubernetes (k3s) clusters on Hetzner, provisioned with Terraform.</li><li>GitOps deployment with ArgoCD and Helm: a merge to Git is a deploy.</li><li>Managed Postgres, a private container registry, persistent storage and automatic TLS certificates.</li><li>Secrets kept in OpenBao and synced into the cluster.</li><li>Full observability with Prometheus, Loki, Tempo and Grafana, plus a proxy that keeps each tenant&#x27;s monitoring data separate.</li><li>A command-line tool and a GitHub Action so teams can deploy without touching Kubernetes.</li></ul></div></section>
+            <section class="cs-block"><h2 class="cs-label">Results</h2><div class="cs-body"><div class="cs-numbers"><div><b>2,100+</b><span>commits, main author</span></div><div><b>~300</b><span>merged pull requests</span></div><div><b>EU</b><span>hosting only</span></div></div></div></section>
+            <section class="cs-block"><h2 class="cs-label">Tech stack</h2><div class="cs-body"><ul class="cs-chips"><li>k3s</li><li>Terraform</li><li>ArgoCD</li><li>Helm</li><li>Cilium</li><li>OpenBao</li><li>CloudNativePG</li><li>Harbor</li><li>Prometheus · Loki · Tempo · Grafana</li><li>Go</li></ul><div class="cs-links"><a href="https://github.com/powerhouse-inc/vetra-cli" target="_blank" rel="noopener">powerhouse-inc/vetra-cli</a><a href="https://github.com/powerhouse-inc/vetra-cloud-package" target="_blank" rel="noopener">powerhouse-inc/vetra-cloud-package</a></div></div></section>
+            <section class="cs-cta-band">
+              <p>Planning something similar?</p>
+              <a href="../index.html#section-contact" class="cs-cta">Let's build together →</a>
+            </section>
+            <nav class="cs-more" aria-label="More case studies">
+              <h2 class="cs-label">More case studies</h2>
+              <ul><li><a href="powerhouse.html"><span class="cs-more-meta">Powerhouse · 2023–today</span><b>Document engine, GraphQL API and cloud console</b></a></li><li><a href="document-ai.html"><span class="cs-more-meta">Vetra Cloud · 2026</span><b>Self-hosted LLM pipeline for documents</b></a></li><li><a href="aavegotchi.html"><span class="cs-more-meta">Aavegotchi · 2021–2024</span><b>Subgraphs and indexing for an on-chain game</b></a></li><li><a href="nft-gallery.html"><span class="cs-more-meta">Filecoin devgrant · 2021</span><b>Grant-funded dApp on IPFS and Filecoin</b></a></li></ul>
+            </nav>
           </div>
         </div>
-      </section>
+      </article>
     </main>
     <footer class="footer">
       <div class="spacer-footer"></div>
