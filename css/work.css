@@ -1,3 +1,5 @@
+/* Accent: electric mint for fills and on black; --accent-ink for thin lines, arrows and text on white */
+:root { --accent-ink: #00915A; }
 /* Work: homepage sections (trusted strip, private-AI offer, work tiles) and /work/*.html pages.
    Built on the site's own tokens: mono type, black on white, one orange accent. */
 .w-label { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; color: var(--_colors---color--copy-grey); }
@@ -20,12 +22,12 @@
 .offer p { font-size: var(--text-size--small); line-height: 1.6; margin: 0; max-width: 60ch; }
 .offer ul { margin: 0; padding: 0; list-style: none; display: grid; gap: .55rem; }
 .offer li { padding-left: 1.5rem; position: relative; line-height: 1.5; }
-.offer li::before { content: "→"; position: absolute; left: 0; color: var(--_colors---color--accent-color); }
+.offer li::before { content: "→"; position: absolute; left: 0; color: var(--accent-ink); }
 .w-spec { display: grid; grid-template-columns: auto 1fr; gap: .45rem 1.25rem; margin: 0; font-size: var(--text-size--tiny); }
 .w-spec dt { color: var(--_colors---color--copy-grey); }
 .w-spec dd { margin: 0; font-variant-numeric: tabular-nums; }
 .offer-proof p { font-size: var(--text-size--tiny); }
-.offer-proof a, .w-inline-link { color: inherit; text-decoration: underline; text-decoration-color: var(--_colors---color--accent-color); text-underline-offset: 3px; }
+.offer-proof a, .w-inline-link { color: inherit; text-decoration: underline; text-decoration-color: var(--accent-ink); text-underline-offset: 3px; }
 .w-btn { display: inline-block; background: #000; color: #fff; padding: 1rem 1.75rem; text-decoration: none; font-weight: 600; width: fit-content; }
 .w-btn:hover { background: #333; }
 
@@ -41,7 +43,7 @@
 .work-tile-meta { font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; opacity: .7; }
 .work-tile h3 { margin: 0; font-size: 1.6rem; font-weight: 600; line-height: 1.1; display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
 .work-tile.big h3 { font-size: 2.4rem; }
-.work-tile h3 span { color: var(--_colors---color--accent-color); transition: transform .2s; }
+.work-tile h3 span { color: var(--accent-ink); transition: transform .2s; }
 .work-tile:hover h3 span { transform: translateX(4px); }
 .work-tile p { margin: 0; line-height: 1.55; font-size: var(--text-size--tiny); }
 .work-tile.big p { font-size: var(--text-size--small); }
@@ -74,11 +76,11 @@
 .wp-facts dd { margin: .3rem 0 0; font-size: var(--text-size--tiny); line-height: 1.4; font-weight: 500; }
 .wp-chapters { position: sticky; top: 0; z-index: 20; background: #fff; border-bottom: 1px solid var(--_colors---color--divider-grey); display: flex; overflow-x: auto; }
 .wp-chapters a { padding: .9rem 0; margin-right: 2rem; text-decoration: none; color: #000; white-space: nowrap; font-size: var(--text-size--tiny); border-bottom: 2px solid transparent; }
-.wp-chapters a:hover { border-bottom-color: var(--_colors---color--accent-color); }
-.wp-chapters a span { color: var(--_colors---color--accent-color); margin-right: .45rem; font-weight: 700; }
+.wp-chapters a:hover { border-bottom-color: var(--accent-ink); }
+.wp-chapters a span { color: var(--accent-ink); margin-right: .45rem; font-weight: 700; }
 .wp-chapter { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 1.5rem 5%; padding: 3rem 0; border-bottom: 1px solid var(--_colors---color--divider-grey); scroll-margin-top: 4rem; }
 .wp-side { display: grid; gap: .8rem; align-content: start; }
-.wp-num { font-size: .8rem; color: var(--_colors---color--accent-color); font-weight: 700; }
+.wp-num { font-size: .8rem; color: var(--accent-ink); font-weight: 700; }
 .wp-side-logo img { max-height: 32px; width: auto; filter: grayscale(100%); }
 .wp-side h2 { font-size: 2rem; line-height: 1.1; font-weight: 600; margin: 0; letter-spacing: -.01em; }
 .wp-side p { margin: 0; color: var(--_colors---color--copy-grey); font-size: var(--text-size--tiny); line-height: 1.5; }
@@ -88,13 +90,13 @@
 .wp-flow { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .75rem 0; }
 .wp-flow li { position: relative; flex: 1 1 0; min-width: 8.5rem; border: 1px solid #000; padding: .85rem .9rem; margin-right: 1.75rem; display: grid; gap: .3rem; align-content: start; background: #fff; }
 .wp-flow li:last-child { margin-right: 0; background: #000; color: var(--_colors---color--copy-bright); }
-.wp-flow li:not(:last-child)::after { content: "→"; position: absolute; right: -1.45rem; top: 50%; transform: translateY(-50%); color: var(--_colors---color--accent-color); font-weight: 700; }
+.wp-flow li:not(:last-child)::after { content: "→"; position: absolute; right: -1.45rem; top: 50%; transform: translateY(-50%); color: var(--accent-ink); font-weight: 700; }
 .wp-flow b { font-size: .95rem; font-weight: 600; line-height: 1.25; }
 .wp-flow span { font-size: .78rem; line-height: 1.35; opacity: .75; }
-.wp-note { font-size: var(--text-size--tiny); color: var(--_colors---color--copy-grey); border-left: 2px solid var(--_colors---color--accent-color); padding-left: .75rem; margin: 0; }
+.wp-note { font-size: var(--text-size--tiny); color: var(--_colors---color--copy-grey); border-left: 2px solid var(--accent-ink); padding-left: .75rem; margin: 0; }
 .wp-built { list-style: none; margin: 0; padding: 0; display: grid; gap: .75rem; }
 .wp-built li { position: relative; padding-left: 1.6rem; line-height: 1.6; max-width: 64ch; }
-.wp-built li::before { content: "→"; position: absolute; left: 0; color: var(--_colors---color--accent-color); }
+.wp-built li::before { content: "→"; position: absolute; left: 0; color: var(--accent-ink); }
 .wp-body .w-spec { font-size: var(--text-size--small); border: 1px solid #000; padding: 1.25rem 1.5rem; }
 .wp-numbers { display: flex; flex-wrap: wrap; gap: 1.5rem 3.5rem; }
 .wp-numbers div { display: grid; gap: .35rem; }
@@ -106,7 +108,7 @@
 .wp-chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
 .wp-chips li { font-size: .82rem; border: 1px solid var(--_colors---color--divider-grey); padding: .2rem .6rem; }
 .wp-links { display: flex; flex-wrap: wrap; gap: .4rem 1.5rem; font-size: var(--text-size--tiny); }
-.wp-links a { color: inherit; text-decoration: underline; text-decoration-color: var(--_colors---color--accent-color); text-underline-offset: 3px; }
+.wp-links a { color: inherit; text-decoration: underline; text-decoration-color: var(--accent-ink); text-underline-offset: 3px; }
 .wp-cta { margin: 3rem 0; padding: 2rem; background: var(--_colors---color--accent-color); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem 2rem; }
 .wp-cta p { margin: 0; font-size: var(--text-size--large); font-weight: 600; color: #000; }
 .wp-next { display: grid; gap: 1.25rem; }
@@ -155,8 +157,7 @@
 .w-btn-ghost { background: #fff; color: #000; border: 1px solid #000; }
 .w-btn-ghost:hover { background: #f2f2f2; }
 .founder { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 2rem 5%; padding-block: 1rem 5rem; align-items: start; }
-.founder-photo img { width: 100%; height: auto; max-width: 22rem; aspect-ratio: 1; object-fit: cover; border: 1px solid #000; filter: grayscale(100%); transition: filter .2s; }
-.founder-photo:hover img { filter: none; }
+.founder-photo img { width: 100%; height: auto; max-width: 22rem; aspect-ratio: 1; object-fit: cover; border: 1px solid #000; }
 .founder-text { display: grid; gap: 1.1rem; }
 .founder-title { font-size: 2.75rem; line-height: 1.05; font-weight: 600; margin: 0; letter-spacing: -.02em; }
 .founder-text p { font-size: var(--text-size--small); line-height: 1.65; margin: 0; max-width: 60ch; }
@@ -170,10 +171,10 @@
 .svc p { margin: 0; line-height: 1.55; font-size: var(--text-size--tiny); color: var(--_colors---color--copy-grey); }
 .svc ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; }
 .svc li { position: relative; padding-left: 1.5rem; line-height: 1.5; font-size: var(--text-size--tiny); }
-.svc li::before { content: "→"; position: absolute; left: 0; color: var(--_colors---color--accent-color); }
+.svc li::before { content: "→"; position: absolute; left: 0; color: var(--accent-ink); }
 .svc-work { margin-top: .25rem; padding-top: .9rem; border-top: 1px solid var(--_colors---color--divider-grey); display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem .6rem; font-size: .82rem; }
 .svc-work b { width: 100%; font-size: .7rem; font-weight: 500; text-transform: uppercase; letter-spacing: .1em; color: var(--_colors---color--copy-grey); }
-.svc-work a { color: #000; font-weight: 600; text-decoration: underline; text-decoration-color: var(--_colors---color--accent-color); text-underline-offset: 3px; }
+.svc-work a { color: #000; font-weight: 600; text-decoration: underline; text-decoration-color: var(--accent-ink); text-underline-offset: 3px; }
 .svc-work a:hover { text-decoration-thickness: 2px; }
 .svc-work span { font-weight: 600; }
 .svc-work i { font-style: normal; color: var(--_colors---color--divider-grey); }
@@ -185,7 +186,7 @@
 .work-quote figcaption { font-size: var(--text-size--tiny); opacity: .7; }
 .contact-note { display: flex; gap: 1.25rem; align-items: flex-start; }
 .contact-note img { width: 5.5rem; height: 5.5rem !important; object-fit: cover; border: 1px solid #000; flex: none; filter: grayscale(100%); }
-.contact-note a { color: inherit; text-decoration: underline; text-decoration-color: var(--_colors---color--accent-color); text-underline-offset: 3px; }
+.contact-note a { color: inherit; text-decoration: underline; text-decoration-color: var(--accent-ink); text-underline-offset: 3px; }
 #section-team ._2-column-item-thirds { grid-column-gap: 5%; grid-row-gap: 0; }
 #section-team .team-item { width: 30%; margin-bottom: 2.5rem; padding-bottom: 4rem; }
 #section-team .team-item-name { font-size: 1.1rem; }
@@ -217,9 +218,9 @@
 .faq:last-child { border-bottom: 1px solid var(--_colors---color--divider-grey); }
 .faq summary { cursor: pointer; font-weight: 600; font-size: var(--text-size--small); list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
 .faq summary::-webkit-details-marker { display: none; }
-.faq summary::after { content: "+"; color: var(--_colors---color--accent-color); font-weight: 700; }
+.faq summary::after { content: "+"; color: var(--accent-ink); font-weight: 700; }
 .faq[open] summary::after { content: "−"; }
-.faq summary:focus-visible { outline: 2px solid var(--_colors---color--accent-color); outline-offset: 3px; }
+.faq summary:focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 3px; }
 .faq p { margin: .75rem 0 0; font-size: var(--text-size--tiny); line-height: 1.6; max-width: 64ch; }
 .wp-hero .hero-ctas { margin-top: .25rem; }
 .svc-teaser { margin-top: 1.25rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 2rem; padding: 1.25rem 1.5rem; background: #000; color: var(--_colors---color--copy-bright); text-decoration: none; transition: box-shadow .2s, transform .2s; }
@@ -227,5 +228,31 @@
 .svc-teaser b { font-size: 1.2rem; font-weight: 600; }
 .svc-teaser span { font-size: var(--text-size--tiny); opacity: .75; flex: 1 1 22rem; }
 .svc-teaser i { font-style: normal; color: var(--_colors---color--accent-color); font-weight: 700; }
-.svc li a { color: inherit; text-decoration: underline; text-decoration-color: var(--_colors---color--accent-color); text-underline-offset: 3px; }
+.svc li a { color: inherit; text-decoration: underline; text-decoration-color: var(--accent-ink); text-underline-offset: 3px; }
 @media screen and (max-width: 767px) { .setup-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Header: links centred, Contact button right ---------- */
+.nav-contact-item { display: none; }
+.nav-cta { min-width: 8rem; text-align: center; background: #000; color: #fff; padding: .7rem 1.25rem; font-weight: 600; text-decoration: none; transition: background .2s; }
+.nav-cta:hover { background: #333; }
+@media screen and (max-width: 991px) {
+  .nav-contact-item { display: block; }
+  .nav-cta { display: none; }
+}
+
+/* ---------- Language switcher ---------- */
+.lang-switch { display: flex; align-items: center; gap: .15rem; margin-left: auto; margin-right: 1rem; font-size: .85rem; }
+.lang-switch a { padding: .35rem .45rem; color: var(--_colors---color--copy-grey); text-decoration: none; font-weight: 500; }
+.lang-switch a:hover { color: #000; }
+.lang-switch a.active { color: #000; font-weight: 700; text-decoration: underline; text-decoration-color: var(--accent-ink); text-underline-offset: 4px; }
+.lang-switch a + a { border-left: 1px solid var(--_colors---color--divider-grey); }
+@media screen and (max-width: 991px) { .lang-switch { margin-right: .5rem; } }
+
+/* ---------- Long German compound words: hyphenate big headings instead of overflowing ---------- */
+.section-title, .wp-title, .hero-title, .founder-title, .wp-side h2, .svc h3, .offer h3, .rich-text-custom { hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
+._2-column-item-1third, ._2-column-item-thirds { min-width: 0; }
+.privacy-wrapper, .imprint-wrapper { min-width: 0; max-width: 100%; }
+/* Keep the main links centred in the header, regardless of the right-hand group's width (desktop only) */
+@media screen and (min-width: 992px) {
+  .navbar-inner .nav-links-wrapper { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+}
