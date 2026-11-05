@@ -70,8 +70,25 @@ function acceptCookies() {
 }
 
 function rejectCookies() {
+  var wasAccepted = localStorage.getItem('cookie-consent') === 'accepted';
   localStorage.setItem('cookie-consent', 'rejected');
   document.getElementById('cookie-banner').style.display = 'none';
+  if (wasAccepted) {
+    // Withdraw consent: delete Google Analytics cookies and reload so GA is unloaded
+    document.cookie.split(';').forEach(function (c) {
+      var name = c.split('=')[0].trim();
+      if (name.indexOf('_ga') === 0) {
+        ['', '; domain=' + location.hostname, '; domain=.' + location.hostname].forEach(function (d) {
+          document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + d;
+        });
+      }
+    });
+    location.reload();
+  }
+}
+
+function openCookieSettings() {
+  document.getElementById('cookie-banner').style.display = 'flex';
 }
 
 function loadGoogleAnalytics() {
