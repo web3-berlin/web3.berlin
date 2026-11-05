@@ -172,7 +172,7 @@
         </a>
         <div class="nav-text-wrapper">
           <div class="text-block text-weight-bold">web3.berlin<br></div>
-          <div class="text-block">it service agency<br></div>
+          <div class="text-block">Web3 &amp; AI engineering<br></div>
         </div>
       </div>
     </div>
@@ -295,6 +295,13 @@
 
 <script>
 // Cookie Consent Management
+function syncBannerSpace() {
+  // Keep the footer reachable: reserve room for the fixed cookie banner while it is visible
+  var b = document.getElementById('cookie-banner');
+  document.body.style.paddingBottom = (b && b.style.display !== 'none') ? b.offsetHeight + 'px' : '';
+}
+window.addEventListener('resize', function () { syncBannerSpace(); });
+
 function getCookieConsent() {
   return localStorage.getItem('cookie-consent');
 }
@@ -302,6 +309,7 @@ function getCookieConsent() {
 function acceptCookies() {
   localStorage.setItem('cookie-consent', 'accepted');
   document.getElementById('cookie-banner').style.display = 'none';
+  syncBannerSpace();
   loadGoogleAnalytics();
 }
 
@@ -309,6 +317,7 @@ function rejectCookies() {
   var wasAccepted = localStorage.getItem('cookie-consent') === 'accepted';
   localStorage.setItem('cookie-consent', 'rejected');
   document.getElementById('cookie-banner').style.display = 'none';
+  syncBannerSpace();
   if (wasAccepted) {
     // Withdraw consent: delete Google Analytics cookies and reload so GA is unloaded
     document.cookie.split(';').forEach(function (c) {
@@ -325,6 +334,7 @@ function rejectCookies() {
 
 function openCookieSettings() {
   document.getElementById('cookie-banner').style.display = 'flex';
+  syncBannerSpace();
 }
 
 function loadGoogleAnalytics() {
@@ -350,6 +360,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('cookie-banner').style.display = 'none';
   }
   // If no consent yet, banner stays visible
+  syncBannerSpace();
 });
 </script>
 </body>
