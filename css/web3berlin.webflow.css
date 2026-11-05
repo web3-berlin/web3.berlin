@@ -2074,3 +2074,8 @@ figure {
 }
 
 
+
+/* Section titles: h2 for document outline, styled like h1 */
+.section-title {
+  font-size: var(--heading--h1);
+}
