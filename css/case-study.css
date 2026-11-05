@@ -1,0 +1,42 @@
+/* Case study pages (/projects/*.html) — built on the site's own tokens */
+.cs-section { padding-bottom: 2rem; }
+.cs-back { display: inline-block; font-size: var(--text-size--tiny); color: var(--_colors---color--copy-grey); text-decoration: none; margin-bottom: 1.5rem; }
+.cs-back:hover { color: var(--_colors---color--copy-dark); }
+.cs-logo { height: 64px; display: flex; align-items: center; margin-bottom: 1.5rem; }
+.cs-logo img { max-height: 64px; max-width: 200px; object-fit: contain; filter: grayscale(100%); }
+.cs-logo-text { font-weight: 700; font-size: 1.5rem; letter-spacing: -.01em; }
+.cs-facts { display: grid; gap: .9rem; margin: 2rem 0 0; }
+.cs-facts dt { font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; color: var(--_colors---color--copy-grey); }
+.cs-facts dd { margin: .15rem 0 0; font-size: var(--text-size--tiny); line-height: 1.4; }
+.cs-main { display: grid; gap: 1.75rem; min-width: 0; }
+.cs-eyebrow { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--_colors---color--copy-grey); }
+.cs-headline { font-size: 2.25rem; line-height: 1.15; font-weight: 600; letter-spacing: -.01em; margin: 0; text-wrap: balance; }
+.cs-main p { font-size: var(--text-size--small); line-height: 1.6; margin: 0; max-width: 68ch; }
+.cs-main h3 { font-size: var(--text-size--large); font-weight: 600; margin: 0; }
+.cs-built { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; }
+.cs-built li { position: relative; padding-left: 1.6rem; line-height: 1.55; max-width: 68ch; }
+.cs-built li::before { content: "→"; position: absolute; left: 0; color: var(--_colors---color--accent-color); }
+.cs-chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .45rem; }
+.cs-chips li { font-size: .8rem; border: 1px solid var(--_colors---color--divider-grey); padding: .15rem .55rem; }
+.cs-numbers { display: flex; flex-wrap: wrap; gap: 1.5rem 3rem; border-top: 1px solid var(--_colors---color--divider-grey); border-bottom: 1px solid var(--_colors---color--divider-grey); padding: 1.25rem 0; }
+.cs-numbers div { display: grid; gap: .2rem; }
+.cs-numbers b { font-size: 2rem; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; }
+.cs-numbers span { font-size: var(--text-size--tiny); color: var(--_colors---color--copy-grey); }
+.cs-quote { margin: 0; border-left: 2px solid var(--_colors---color--copy-dark); padding-left: 1.25rem; font-size: var(--text-size--small); line-height: 1.6; max-width: 64ch; }
+.cs-quote footer { margin-top: .5rem; font-size: var(--text-size--tiny); color: var(--_colors---color--copy-grey); }
+.cs-links { display: flex; flex-wrap: wrap; gap: .4rem 1.5rem; font-size: var(--text-size--tiny); }
+.cs-links a, .cs-main p a { color: inherit; text-decoration: underline; text-decoration-color: var(--_colors---color--accent-color); text-underline-offset: 3px; }
+.cs-cta { display: inline-block; padding: 1rem 2rem; background: #000; color: #fff; text-decoration: none; font-weight: 600; width: fit-content; }
+.cs-cta:hover { background: #333; }
+.cs-more { border-top: 2px solid #000; padding-top: 1.25rem; display: grid; gap: .75rem; }
+.cs-more ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: .5rem 2rem; }
+.cs-more a { color: inherit; text-decoration: none; display: flex; justify-content: space-between; gap: 1rem; border-top: 1px solid var(--_colors---color--divider-grey); padding: .6rem 0; }
+.cs-more a:hover { text-decoration: underline; text-decoration-color: var(--_colors---color--accent-color); }
+.cs-more a span { color: var(--_colors---color--copy-grey); font-size: var(--text-size--tiny); white-space: nowrap; }
+.project-card-link { display: inline-block; margin-top: .9rem; font-size: .85rem; font-weight: 600; color: inherit; text-decoration: none; border-bottom: 1px solid var(--_colors---color--accent-color); }
+.project-card-link:hover { border-bottom-width: 2px; }
+@media screen and (max-width: 767px) {
+  .cs-headline { font-size: 1.6rem; }
+  .cs-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cs-numbers b { font-size: 1.6rem; }
+}
