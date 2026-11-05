@@ -787,7 +787,7 @@ figure {
 
 ._2-column-item-thirds {
   grid-column-gap: 10%;
-  grid-row-gap: 10%;
+  grid-row-gap: 2rem;
   flex-flow: wrap;
   justify-content: flex-start;
   align-items: center;
@@ -1884,7 +1884,7 @@ figure {
 
   ._2-column-item-thirds {
     grid-column-gap: 4%;
-    grid-row-gap: 4%;
+    grid-row-gap: 1rem;
   }
 
   .footer {
