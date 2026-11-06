@@ -1,0 +1,21 @@
+# web3.berlin
+
+> Founder-led engineering team in Berlin, Germany (since 2020). We build and run blockchain and AI systems in production: smart contracts and dApps, AI agents and document AI, private AI on the client's own servers (on-premise or in an EU data centre), Kubernetes platforms and 24/7 blockchain infrastructure operations. Founder: Frank Polster. Languages: English and German.
+
+## Services
+- [Services overview](https://web3.berlin/#section-services): strategic consulting, full-stack Web3 development, applied AI and agents, operations and infrastructure.
+- [Private AI on your own servers](https://web3.berlin/private-ai.html): open-weight models (Qwen, DeepSeek, Liquid AI) in the client's office or on a dedicated server in an EU data centre (e.g. Hetzner, Finland). No data goes to an AI provider. Sizing, setup, integration and maintenance. German: [Lokale KI für Unternehmen](https://web3.berlin/de/private-ai.html).
+
+## Work
+- [Powerhouse](https://web3.berlin/work/powerhouse.html): three years on the core team of Powerhouse (Sky/MakerDAO ecosystem): document engine and GraphQL API, the Vetra Cloud multi-tenant Kubernetes platform, private in-cluster document AI. 1,000+ merged pull requests.
+- [Aavegotchi](https://web3.berlin/work/aavegotchi.html): lead subgraph developers (2021–2024) for one of Polygon's most active on-chain games.
+- [Lab](https://web3.berlin/work/lab.html): our own AI workstation (4× RTX 3090, 96 GB VRAM, Threadripper 3960X, 256 GB RAM) for open-weight models; Ethereum validators (Prysm) since Beacon Chain genesis in 2020 with 99.9% uptime and an archive node on own hardware; Cortical Mirror (CIMC hackathon); ph-reactor, a peer-to-peer document store in Rust.
+- Other clients and projects: DT BAU (BIM platform), MakerDAO (ecosystem analytics API), Ethereum Foundation (Staking Launchpad contributor), Filecoin (NFT gallery grant).
+
+## Guides
+- [Lokale KI im Unternehmen: Welche Hardware brauchen Sie wirklich?](https://web3.berlin/de/lokale-ki-hardware.html) (German): GPU memory rules of thumb and typical setups for running AI models locally.
+
+## Contact
+- Email: frank@web3.berlin
+- Website: https://web3.berlin/ (German: https://web3.berlin/de/)
+- Address: Lückstr. 30, 10317 Berlin, Germany

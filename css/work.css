@@ -258,3 +258,10 @@
 
 /* Team photos in colour */
 .team-item .black-white-image { filter: none; }
+
+/* Guide tables */
+.wp-table-wrap { overflow-x: auto; margin: .5rem 0; }
+.wp-table { width: 100%; border-collapse: collapse; font-size: var(--text-size--small); }
+.wp-table th, .wp-table td { text-align: left; padding: .6rem .75rem; border-bottom: 1px solid var(--_colors---color--divider-grey); vertical-align: top; }
+.wp-table th { font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; color: var(--_colors---color--copy-grey); font-weight: 500; border-bottom-color: #000; }
+.wp-body > p { line-height: 1.7; max-width: 68ch; }

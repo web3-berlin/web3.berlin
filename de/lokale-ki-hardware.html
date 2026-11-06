@@ -1,0 +1,443 @@
+<!DOCTYPE html><!--  Last Published: Fri Jul 11 2025 10:24:01 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="6870e101241cd1bbb487f38b" data-wf-site="6870e101241cd1bbb487f37d" lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Lokale KI im Unternehmen: welche Hardware? — web3.berlin</title>
+  <link rel="alternate" hreflang="de" href="https://web3.berlin/de/lokale-ki-hardware.html">
+  <meta name="description" content="Wie viel GPU-Speicher braucht ein lokales KI-Modell? Faustregeln, typische Setups von der Workstation bis zum EU-Rechenzentrum und Erfahrungen aus unserem Lab.">
+  <link rel="canonical" href="https://web3.berlin/de/lokale-ki-hardware.html">
+  <meta property="og:title" content="Lokale KI im Unternehmen: Welche Hardware brauchen Sie wirklich?">
+  <meta property="og:description" content="Wie viel GPU-Speicher braucht ein lokales KI-Modell? Faustregeln, typische Setups von der Workstation bis zum EU-Rechenzentrum und Erfahrungen aus unserem Lab.">
+  <meta property="og:image" content="https://web3.berlin/images/og-card-de.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:image" content="https://web3.berlin/images/og-card-de.jpg">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://web3.berlin/de/lokale-ki-hardware.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lokale KI im Unternehmen: Welche Hardware brauchen Sie wirklich?">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel="preload" href="../fonts/noto-sans-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link href="../css/fonts.css" rel="stylesheet" type="text/css">
+  <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="../css/web3berlin.webflow.css" rel="stylesheet" type="text/css">
+  <link href="../css/work.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript">
+      ! function(o, c) {
+        var n = c.documentElement,
+          t = " w-mod-";
+        n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+      }(window, document);
+    </script>
+  <link href="../images/favicon.jpg" rel="shortcut icon" type="image/x-icon">
+  <link href="../images/webclip.jpg" rel="apple-touch-icon">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Lokale KI im Unternehmen: Welche Hardware brauchen Sie wirklich?",
+      "description": "Wie viel GPU-Speicher braucht ein lokales KI-Modell? Faustregeln, typische Setups von der Workstation bis zum EU-Rechenzentrum und Erfahrungen aus unserem Lab.",
+      "url": "https://web3.berlin/de/lokale-ki-hardware.html",
+      "inLanguage": "de",
+      "datePublished": "2026-11-05",
+      "dateModified": "2026-11-05",
+      "image": "https://web3.berlin/images/og-card-de.jpg",
+      "author": {
+        "@type": "Person",
+        "name": "Frank Polster",
+        "url": "https://web3.berlin/de/",
+        "sameAs": [
+          "https://www.linkedin.com/in/fpfeift",
+          "https://github.com/froid1911"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "web3.berlin",
+        "url": "https://web3.berlin/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://web3.berlin/images/webclip.jpg"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "web3.berlin",
+          "item": "https://web3.berlin/de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Private KI",
+          "item": "https://web3.berlin/de/private-ai.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Welche Hardware?",
+          "item": "https://web3.berlin/de/lokale-ki-hardware.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <!-- Floating Social Sidebar -->
+<div id="social-sidebar" style="position: fixed; left: 0; top: 50%; transform: translateY(-50%); z-index: 1000; display: flex; flex-direction: column; gap: 0; background: #000; padding: 0.5rem 0; border-radius: 0 4px 4px 0;">
+  <a href="https://github.com/froid1911" target="_blank" rel="noopener" style="color: #fff; padding: 0.75rem; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='transparent'" aria-label="GitHub">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+  </a>
+  <a href="https://www.linkedin.com/in/fpfeift" target="_blank" rel="noopener" style="color: #fff; padding: 0.75rem; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='transparent'" aria-label="LinkedIn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+  </a>
+  <a href="https://x.com/frankpfeift" target="_blank" rel="noopener" style="color: #fff; padding: 0.75rem; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='transparent'" aria-label="X (Twitter)">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+</div>
+
+<style>
+  /* Hide sidebar on mobile */
+  @media screen and (max-width: 768px) {
+    #social-sidebar {
+      display: none !important;
+    }
+  }
+</style>
+
+  <div class="page-wrapper">
+    <div class="global-styles w-embed">
+      <style>
+          /* Text in allen Browsern schärfer und besser lesbar machen */
+          body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+          }
+          /* Font sizes for fluid design */
+          html {
+            font-size: 1rem;
+          }
+          @media screen and (max-width:1600px) {
+            html {
+              font-size: calc(0.34318555008210183rem + 0.6568144499178982vw);
+            }
+          }
+          @media screen and (max-width:991px) {
+            html {
+              font-size: 0.75rem;
+            }
+          }
+          @media screen and (max-width:767px) {
+            html {
+              font-size: 0.65625rem;
+            }
+          }
+          /* Entfernt den oberen Abstand des letzten Elements in einem beliebigen Rich-Text-Element */
+          .w-richtext> :not(div):first-child,
+          .w-richtext>div:first-child> :first-child {
+            margin-top: 0 !important;
+          }
+          /* Entfernt den unteren Abstand des letzten Elements in einem beliebigen Rich-Text-Element */
+          .w-richtext>:last-child,
+          .w-richtext ol li:last-child,
+          .w-richtext ul li:last-child,
+          .w-richtext p:last-child {
+            margin-bottom: 0 !important;
+          }
+          /* Diese Klassen werden nicht überschrieben */
+          .hide,
+          .hide-desktop-only {
+            display: none !important;
+          }
+          @media screen and (max-width: 991px) {
+            .hide,
+            .hide-tablet {
+              display: none !important;
+            }
+          }
+          @media screen and (max-width: 991px) {
+            .hide-desktop-only {
+              display: block !important;
+            }
+          }
+          @media screen and (max-width: 767px) {
+            .hide-mobile-landscape {
+              display: none !important;
+            }
+          }
+          @media screen and (max-width: 479px) {
+            .hide-mobile {
+              display: none !important;
+            }
+          }
+          .margin-0 {
+            margin: 0rem !important;
+          }
+          .padding-0 {
+            padding: 0rem !important;
+          }
+          /* Silbentrennung ab Mobile Landscape erlauben */
+          /* @media screen and (max-width: 767px) {*/
+          .hyphens,
+          [hyphens=active] {
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            -moz-hyphens: auto;
+            hyphens: auto;
+          }
+          /*}*/
+          /* safari bug border radius mit overflow hidden */
+          /*
+  .isolate {
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  isolation: isolate;
+  }
+  */
+          /* Webflow Slider Dots Farben anpassen */
+          .w-slider-dot {
+            background-color: #d2d2d2 !important;
+          }
+          .w-slider-dot.w-active {
+            background-color: var(--_colors---color--copy-dark) !important;
+          }
+          .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+          }
+          /* Navbar Icon open background color white */
+          .w-nav-button.w--open {
+            background-color: #fff;
+          }
+          .main-wrapper {
+            min-height: calc(100svh - 10rem-1px);
+          }
+        </style>
+    </div>
+    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar navbar-3 navbar-4 w-nav">
+      <div class="navbar-inner">
+        <a href="index.html" aria-label="web3.berlin Startseite" class="logo-wrapper w-nav-brand">
+          <div class="logo w-embed"><svg width="100%" height="100%" viewbox="0 0 117 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_8_392)">
+                <path d="M99.2323 18.2295L113.73 0.719788H5.58882L33.935 20.3594V47.9143L19.7619 34.008L5.58882 47.9143V0.719788H0V52.8947H99.2323C108.752 52.7135 116.446 45.3859 116.971 36.6009C117.542 27.0951 109.561 18.463 99.2323 18.2336V18.2295ZM64.9485 48.172H48.1205C41.7602 48.172 36.6064 43.1152 36.6064 36.8746V20.3634H48.1205H64.9485V34.306H56.3724C55.9456 34.4066 55.6297 34.7488 55.5804 35.1474C55.5271 35.6225 55.8595 36.0936 56.3724 36.2184H64.9485V48.172ZM89.9299 41.09C89.9299 44.9793 86.717 48.172 82.749 48.172H67.6116V20.3594H82.749C86.7129 20.3594 89.9299 23.5118 89.9299 27.4051C89.9299 30.7267 87.5869 33.5007 84.4355 34.2456C87.5869 34.9904 89.9299 37.7684 89.9299 41.086V41.09Z" fill="currentColor"></path>
+              </g>
+              <defs>
+                <clippath id="clip0_8_392">
+                  <rect width="117" height="52.1749" fill="white" transform="translate(0 0.719788)"></rect>
+                </clippath>
+              </defs>
+            </svg></div>
+        </a>
+        <nav role="navigation" class="nav-links-wrapper w-nav-menu">
+          <div class="nav-grid">
+            <div id="w-node-_00dc33f2-bf34-926c-1ae3-e037b2a01449-df33ac17" class="block">
+              <a href="index.html#section-work" class="main-link w-nav-link">Projekte</a>
+            </div>
+            <div class="block">
+              <a href="index.html#section-services" class="main-link w-nav-link">Leistungen</a>
+            </div>
+            <div class="block">
+              <a href="index.html#section-team" class="main-link w-nav-link">Team</a>
+            </div>
+            <div id="w-node-ce5b8cbc-c45b-6c96-a714-c8ad3d45cf9b-df33ac17" class="block nav-contact-item">
+              <a href="index.html#section-contact" class="main-link w-nav-link">Kontakt</a>
+            </div>
+          </div>
+        </nav>
+        <div class="lang-switch" aria-label="Sprache"><a href="../index.html" hreflang="en" lang="en">EN</a><a href="lokale-ki-hardware.html" hreflang="de" lang="de" class="active" aria-current="true">DE</a></div><a href="index.html#section-contact" class="nav-cta">Kontakt</a>
+        <div class="burger-icon-wrapper w-nav-button">
+          <div class="burger-icon w-icon-nav-menu"></div>
+        </div>
+      </div>
+    </div>
+    <main class="main-wrapper">
+      <article class="wp">
+        <div class="page-padding">
+          <div class="w-layout-blockcontainer container-large w-container">
+            <header class="wp-hero">
+              <a href="private-ai.html" class="wp-back">← Private KI</a>
+              <div class="wp-hero-text">
+                <div class="w-label">Ratgeber · Lokale KI</div>
+                <h1 class="wp-title">Lokale KI im Unternehmen: Welche Hardware brauchen Sie wirklich?</h1>
+                <p class="wp-lede">Wer KI im Unternehmen einsetzen will, ohne Dokumente an OpenAI oder Google zu schicken, landet schnell bei der Frage: Welche Hardware brauchen wir dafür? Die Antwort hängt vor allem an einer Zahl, dem Speicher der Grafikkarte. Hier sind die Faustregeln, die wir selbst nutzen.</p>
+              </div>
+              <dl class="wp-facts">
+                <div><dt>Autor</dt><dd>Frank Polster</dd></div>
+                <div><dt>Stand</dt><dd>November 2026</dd></div>
+                <div><dt>Lesezeit</dt><dd>ca. 5 Minuten</dd></div>
+              </dl>
+            </header>
+
+            <section class="wp-chapter">
+              <div class="wp-side"><h2>Die wichtigste Zahl: GPU-Speicher</h2><p>Das Modell muss in den Speicher der Grafikkarte passen.</p></div>
+              <div class="wp-body">
+                <p>Ein Sprachmodell besteht aus Milliarden von Parametern. Damit es schnell antwortet, muss es vollständig in den Speicher der Grafikkarte (VRAM) passen. Passt es nicht, wird es um ein Vielfaches langsamer.</p>
+                <p>Die Faustregel: Mit 4-Bit-Quantisierung, dem üblichen Kompromiss aus Qualität und Größe, braucht ein Modell etwa 0,6 GB pro Milliarde Parameter. Dazu kommt Speicher für den Kontext, also die Dokumente und den Gesprächsverlauf. Bei langen Dokumenten und mehreren Nutzern gleichzeitig sind das schnell noch einige Gigabyte.</p>
+                <div class="wp-table-wrap"><table class="wp-table"><thead><tr><th>Modellgröße (Parameter)</th><th>GPU-Speicher, 4-Bit</th><th>Typische Hardware</th></tr></thead><tbody><tr><td>7–8 Mrd.</td><td>ca. 5–6 GB</td><td>fast jede aktuelle Grafikkarte</td></tr><tr><td>14 Mrd.</td><td>ca. 9–10 GB</td><td>Karte mit 12–16 GB</td></tr><tr><td>32 Mrd.</td><td>ca. 20 GB</td><td>eine Karte mit 24 GB, z. B. RTX 3090</td></tr><tr><td>70 Mrd.</td><td>ca. 40–45 GB</td><td>zwei Karten mit je 24 GB</td></tr><tr><td>über 600 Mrd. (z. B. großes DeepSeek)</td><td>mehrere hundert GB</td><td>Server mit mehreren Profi-GPUs</td></tr></tbody></table></div>
+                <p class="wp-note">Grobe Richtwerte für 4-Bit-Modelle ohne langen Kontext. Die genauen Werte hängen von Modell, Quantisierung und Software ab.</p>
+              </div>
+            </section>
+
+            <section class="wp-chapter">
+              <div class="wp-side"><h2>Welche Modellgröße reicht?</h2><p>Größer ist nicht immer besser.</p></div>
+              <div class="wp-body">
+                <ul class="wp-built">
+                  <li><b>Kleine Modelle (bis ca. 8 Mrd. Parameter)</b> reichen für Zusammenfassungen, Klassifizierung und einfache Fragen. Effiziente Modelle wie die LFM-Familie von Liquid AI laufen sogar auf schwächerer Hardware.</li>
+                  <li><b>Mittlere Modelle (14 bis 32 Mrd.)</b> sind für viele Unternehmen der beste Kompromiss: guter Assistent, gute Suche in eigenen Dokumenten, brauchbare Hilfe beim Programmieren. Qwen hat hier starke Modelle.</li>
+                  <li><b>Große Modelle (70 Mrd. und mehr)</b> lohnen sich für anspruchsvolles Schreiben, komplexe Analysen und viele gleichzeitige Nutzer.</li>
+                </ul>
+                <p>Unser Rat: Starten Sie mit dem kleinsten Modell, das Ihre Aufgabe gut löst. Neue offene Modelle erscheinen alle paar Monate, und die mittlere Klasse holt schnell auf.</p>
+              </div>
+            </section>
+
+            <section class="wp-chapter">
+              <div class="wp-side"><h2>Drei typische Setups</h2><p>Von der Workstation im Büro bis zum Rechenzentrum.</p></div>
+              <div class="wp-body">
+                <div class="setup-grid">
+                  <div class="setup"><div class="w-label">Einstieg</div><h3>Workstation mit einer GPU</h3><p>Eine Grafikkarte mit 24 GB reicht für Modelle bis etwa 32 Mrd. Parameter. Gut für ein kleines Team mit Assistent und Dokumentensuche.</p></div>
+                  <div class="setup"><div class="w-label">Mehr Leistung</div><h3>Workstation mit mehreren GPUs</h3><p>Zwei bis vier Karten ergeben 48 bis 96 GB. Damit laufen Modelle der 70-Mrd.-Klasse, mehrere Modelle parallel oder auch Bild- und Videogenerierung.</p></div>
+                  <div class="setup"><div class="w-label">Ohne eigene Hardware</div><h3>GPU-Server im EU-Rechenzentrum</h3><p>Ein dedizierter Server nur für Sie, zum Beispiel bei Hetzner in Finnland. Kein Gerät im Büro, trotzdem kein KI-Anbieter dazwischen.</p></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="wp-chapter">
+              <div class="wp-side"><h2>Was oft vergessen wird</h2><p>Strom, Wärme, Lautstärke und Arbeitsspeicher.</p></div>
+              <div class="wp-body">
+                <ul class="wp-built">
+                  <li><b>Strom und Wärme:</b> Eine RTX 3090 ist für bis zu 350 Watt ausgelegt. Vier davon ziehen unter Last allein über 1,4 kW. Das braucht eine passende Stromversorgung und Kühlung.</li>
+                  <li><b>Lautstärke:</b> Eine Multi-GPU-Workstation gehört nicht neben den Schreibtisch, sondern in einen Server- oder Technikraum.</li>
+                  <li><b>Arbeitsspeicher und CPU:</b> Viel RAM hilft beim Laden der Modelle und bei der Verarbeitung großer Dokumentenmengen, etwa beim Einlesen von Scans.</li>
+                  <li><b>Betrieb:</b> Updates, Monitoring und neue Modelle kosten laufend Zeit. Planen Sie das ein, egal ob intern oder mit einem Dienstleister.</li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="wp-chapter">
+              <div class="wp-side"><h2>Unser eigenes Lab</h2><p>Was wir selbst betreiben.</p></div>
+              <div class="wp-body">
+                <p>Wir empfehlen nur, was wir selbst nutzen. In unserem Lab läuft eine Workstation mit vier RTX 3090 (zusammen 96 GB GPU-Speicher), einem Threadripper 3960X und 256 GB DDR4-Arbeitsspeicher. Darauf testen wir neue offene Modelle wie Qwen, DeepSeek und Liquid AI, für Text, Code, Bilder und Video, meist mit llama.cpp.</p>
+                <p>Für die Verarbeitung von Dokumenten wie PDFs und Scans setzen wir Docling ein, auch in Produktion bei Kunden. <a class="w-inline-link" href="work/lab.html#ch-ai-workstation">Mehr über unser Lab →</a></p>
+              </div>
+            </section>
+
+            <section class="wp-chapter">
+              <div class="wp-side"><h2>Fazit</h2></div>
+              <div class="wp-body">
+                <p>Für die meisten Unternehmen reicht für den Einstieg eine Workstation mit einer 24-GB-Grafikkarte oder ein gemieteter GPU-Server in der EU. Entscheidend ist nicht die größte Hardware, sondern ein Modell, das zu Ihrer Aufgabe passt, und ein System, das zuverlässig läuft.</p>
+                <p>Wenn Sie unsicher sind, was Sie brauchen: Beschreiben Sie uns Ihren Anwendungsfall, und wir schicken Ihnen eine grobe Einschätzung für Hardware, Einrichtung und Betrieb.</p>
+              </div>
+            </section>
+
+            <section class="wp-cta"><p>Private KI für Ihr Unternehmen?</p><a href="private-ai.html" class="w-btn">Zum Angebot →</a></section>
+          </div>
+        </div>
+      </article>
+    </main>
+    <footer class="footer">
+      <div class="spacer-footer"></div>
+      <a href="imprint.html" class="footer-item w-inline-block">
+        <div class="main-link footer">Impressum &amp; Datenschutz</div>
+      </a>
+      <a href="#" onclick="openCookieSettings(); return false;" class="footer-item w-inline-block">
+        <div class="main-link footer">Cookie-Einstellungen</div>
+      </a>
+    </footer>
+  </div>
+  <script src="../js/jquery-3.5.1.min.js" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="../js/webflow.js" type="text/javascript"></script>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #000; color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; z-index: 9999; font-family: 'Noto Sans Mono', monospace; font-size: 0.875rem;">
+  <div style="flex: 1; min-width: 200px;">
+    🍪 Wir verwenden Cookies, um unseren Traffic zu analysieren. Mit „Akzeptieren“ stimmen Sie der Verwendung von Cookies zu. 
+    <a href="imprint.html#privacy" style="color: #fff; text-decoration: underline;">Zur Datenschutzerklärung</a>
+  </div>
+  <div style="display: flex; gap: 0.5rem;">
+    <button onclick="acceptCookies()" style="padding: 0.5rem 1.5rem; background: #fff; color: #000; border: none; cursor: pointer; font-family: inherit; font-weight: 600;">Akzeptieren</button>
+    <button onclick="rejectCookies()" style="padding: 0.5rem 1.5rem; background: transparent; color: #fff; border: 1px solid #fff; cursor: pointer; font-family: inherit;">Ablehnen</button>
+  </div>
+</div>
+
+<script>
+// Cookie Consent Management
+function syncBannerSpace() {
+  // Keep the footer reachable: reserve room for the fixed cookie banner while it is visible
+  var b = document.getElementById('cookie-banner');
+  document.body.style.paddingBottom = (b && b.style.display !== 'none') ? b.offsetHeight + 'px' : '';
+}
+window.addEventListener('resize', function () { syncBannerSpace(); });
+
+function getCookieConsent() {
+  return localStorage.getItem('cookie-consent');
+}
+
+function acceptCookies() {
+  localStorage.setItem('cookie-consent', 'accepted');
+  document.getElementById('cookie-banner').style.display = 'none';
+  syncBannerSpace();
+  loadGoogleAnalytics();
+}
+
+function rejectCookies() {
+  var wasAccepted = localStorage.getItem('cookie-consent') === 'accepted';
+  localStorage.setItem('cookie-consent', 'rejected');
+  document.getElementById('cookie-banner').style.display = 'none';
+  syncBannerSpace();
+  if (wasAccepted) {
+    // Withdraw consent: delete Google Analytics cookies and reload so GA is unloaded
+    document.cookie.split(';').forEach(function (c) {
+      var name = c.split('=')[0].trim();
+      if (name.indexOf('_ga') === 0) {
+        ['', '; domain=' + location.hostname, '; domain=.' + location.hostname].forEach(function (d) {
+          document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + d;
+        });
+      }
+    });
+    location.reload();
+  }
+}
+
+function openCookieSettings() {
+  document.getElementById('cookie-banner').style.display = 'flex';
+  syncBannerSpace();
+}
+
+function loadGoogleAnalytics() {
+  // Load GA4 only if consent given
+  var script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-MG68EJM985';
+  document.head.appendChild(script);
+  
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MG68EJM985', { 'anonymize_ip': true });
+}
+
+// On page load
+document.addEventListener('DOMContentLoaded', function() {
+  var consent = getCookieConsent();
+  if (consent === 'accepted') {
+    document.getElementById('cookie-banner').style.display = 'none';
+    loadGoogleAnalytics();
+  } else if (consent === 'rejected') {
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+  // If no consent yet, banner stays visible
+  syncBannerSpace();
+});
+</script>
+</body>
+</html>
