@@ -241,7 +241,7 @@
 
 /* ---------- Language switcher ---------- */
 .lang-switch { display: flex; align-items: center; gap: .15rem; margin-left: auto; margin-right: 1rem; font-size: .85rem; }
-.lang-switch a { padding: .35rem .45rem; color: var(--_colors---color--copy-grey); text-decoration: none; font-weight: 500; }
+.lang-switch a { display: inline-flex; align-items: center; justify-content: center; min-width: 2.75rem; min-height: 2.75rem; padding: .35rem .45rem; color: var(--_colors---color--copy-grey); text-decoration: none; font-weight: 500; }
 .lang-switch a:hover { color: #000; }
 .lang-switch a.active { color: #000; font-weight: 700; text-decoration: underline; text-decoration-color: var(--accent-ink); text-underline-offset: 4px; }
 .lang-switch a + a { border-left: 1px solid var(--_colors---color--divider-grey); }
